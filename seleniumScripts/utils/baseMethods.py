@@ -3,7 +3,7 @@ import pprint
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class BasePage:
+class basePage:
     def __init__(self, driver):
         """
         Initializes the base page object with a WebDriver instance and sets a default wait time.
@@ -193,21 +193,3 @@ class BasePage:
         WebDriverWait(self.driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
-
-    def custom_lambda(self, condition):
-        """
-        Waits until a custom condition is met.
-
-        Args:
-            condition (Union[str, Callable]): A callable (usually a lambda function)
-                or a string representing a lambda that returns a boolean indicating
-                whether the condition is met.
-
-        Notes:
-            - If the condition is provided as a string, it is evaluated using eval().
-            Ensure the input string is safe and trusted.
-            - Used for flexible wait conditions with WebDriverWait.
-        """
-        if isinstance(condition, str):
-            condition = eval(condition)
-        WebDriverWait(self.driver, 10).until(condition)
