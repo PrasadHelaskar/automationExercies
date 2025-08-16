@@ -10,11 +10,14 @@ class Logger:
         date = today.strftime("%d")
         year_directory = os.path.join(base_log_dir, year)
         log_directory = os.path.join(year_directory, month)
+        
         if not os.path.exists(log_directory):
             os.makedirs(log_directory)
+        
         log_file_path = os.path.join(log_directory, f"{date}.log")
         self.logger = logging.getLogger(__name__)
         self.logger.setLevel(log_level)
+        
         if not self.logger.handlers:
             file_handler = logging.FileHandler(log_file_path)
             file_handler.setLevel(log_level)
@@ -30,8 +33,10 @@ class Logger:
             self.logger.addHandler(console_handler)
 
     def get_logger(self, classname=None):
+        
         if classname:
             return logging.LoggerAdapter(self.logger, {'classname': classname})
+        
         else:
             return logging.LoggerAdapter(self.logger, {'classname': 'GLOBAL'})
         
