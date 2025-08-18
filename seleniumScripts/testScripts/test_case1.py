@@ -16,6 +16,8 @@ class Test_caseOne():
         startTime=time.time()
         name=faker.name()
         email=faker.email()
+        log.info("name %s",name)
+        log.info("email %s",email)
         tco.signupActions(name,email)
         password="1234567890"
         tco.genderNamePasswordActions(name,password)
@@ -36,7 +38,7 @@ class Test_caseOne():
 
         tco.CreatAccountActions(name)
 
-        tco.postAccountActions()
+        # tco.postAccountActions()
 
         endTime=time.time()
 

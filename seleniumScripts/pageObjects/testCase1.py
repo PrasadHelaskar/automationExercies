@@ -102,7 +102,7 @@ class testCaseOne(baseMethods):
 
         self.click(self.__private_Continuebutton)
 
-        assert self.get_text(self.__private_loggedinUserNmae).lower() == name.lower() , "Account is not verifird as useeer name is different"
+        assert self.get_text(self.__private_loggedinUserNmae).lower() == name.lower() , "Account is not verifird as user name is different"
 
     def postAccountActions(self):
         self.click(self.__private_deleteAccount)
