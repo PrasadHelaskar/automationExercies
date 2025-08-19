@@ -3,7 +3,7 @@ import pprint
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class basePage:
+class baseMethods:
     def __init__(self, driver):
         """
         Initializes the base page object with a WebDriver instance and sets a default wait time.
