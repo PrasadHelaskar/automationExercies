@@ -12,7 +12,7 @@ with open ("seleniumScripts/testData/testLoginData.json") as testFile:
     data=json.load(testFile)
 
 class Test_caseFour():
-    @pytest.mark.order(2)
+    @pytest.mark.order(4)
     @pytest.mark.parametrize("credentials",[
         (data["valid_data"])
         # (data["invalid_data"])
