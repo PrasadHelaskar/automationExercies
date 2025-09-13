@@ -3,8 +3,7 @@ import json
 __private_filePath="seleniumScripts/testData/testData.json"
 
 def jsonRead(key):
-    """For reading the json file"""    
-    
+    """For reading the json file"""        
     with open(__private_filePath, 'r',encoding='utf-8') as jsonFile:
         data=json.load(jsonFile)
 
@@ -12,7 +11,6 @@ def jsonRead(key):
     
 def jsonWrite(key,value):
     """For updaing the json file"""
-    
     with open(__private_filePath,'r',encoding='utf-8') as jsonFile:
         data=json.load(jsonFile)
 
