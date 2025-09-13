@@ -1,6 +1,7 @@
 import sys
 import pprint
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
 
 class baseMethods:
@@ -169,6 +170,24 @@ class baseMethods:
         element = self.find_element_wait(locator)
         value=element.get_attribute(attribute)
         return value
+    
+    def hoverOnElemet(self,locator):
+        """
+        Hover the mouse pointer over a web element.
+
+        This method uses Selenium's ActionChains to move the mouse cursor 
+        to the specified web element located by the given locator. 
+        It is typically used to trigger hover effects such as dropdowns 
+        or tooltips.
+
+        Args:
+            locator (tuple): A locator tuple (By, value) used to identify the element.
+
+        Returns:
+            None
+        """
+        actions=ActionChains(self.driver)
+        actions.move_to_element(self.find_element_wait(locator)).perform()
         
     def DD(self, data=None):
         """
