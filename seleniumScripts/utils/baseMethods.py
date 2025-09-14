@@ -212,3 +212,24 @@ class baseMethods:
         WebDriverWait(self.driver, 10).until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
+    
+    def scrollTillElement(self, locator):
+        """
+        Scrolls the web page until the specified element is visible in the viewport.
+
+        Args:
+            locator (tuple): A tuple containing the locator strategy and locator value 
+                            (e.g., (By.ID, "element_id")) used to identify the element.
+
+        Returns:
+            None: This method performs a scroll action and does not return a value.
+
+        Raises:
+            TimeoutException: If the element is not found within the wait period.
+            NoSuchElementException: If the element cannot be located on the page.
+
+        Example:
+            self.scrollTillElemet((By.XPATH, "//div[@id='target']"))
+        """
+        element = self.find_element_wait_presence(locator=locator)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)

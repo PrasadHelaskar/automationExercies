@@ -10,7 +10,7 @@ log=Logger().get_logger(__name__)
 class Test_caseThirteen():
     @pytest.mark.order(6)
     def test_caseThirteen(self,driver):
-        initialTest().initialtest(driver)
+        # initialTest().initialtest(driver)
         tct=testCaseThirteen(driver)
         startTime=time.time()
         

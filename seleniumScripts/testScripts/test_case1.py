@@ -19,7 +19,7 @@ class Test_caseOne():
         log.info("name %s",name)
         log.info("email %s",email)
         tco.signupActions(name,email)
-        password="1234567890"
+        password="123654789"
         tco.genderNamePasswordActions(name,password)
 
         tco.birthDayselection(23,4,2015)
