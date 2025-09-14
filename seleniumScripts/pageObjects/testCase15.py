@@ -5,7 +5,7 @@ from seleniumScripts.utils.logger import Logger
 
 log=Logger().get_logger(__name__)
 
-class testCaseFourteen(baseMethods):
+class testCaseFifteen(baseMethods):
     __private_proceedCheckout=(By.CSS_SELECTOR, "a[class='btn btn-default check_out']")
 
     __private_loginButtonModel=(By.XPATH, "(//a[@href='/login'])[2]")
