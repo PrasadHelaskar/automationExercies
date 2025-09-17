@@ -4,7 +4,10 @@ from seleniumScripts.utils.logger import Logger
 
 log=Logger().get_logger(__name__)
 
-class testCaseFifteen(baseMethods):
+class testCaseSixteen(baseMethods):
+
+    __private_logoutButton=(By.CSS_SELECTOR,"a[href='/logout']")
+
     __private_proceedCheckout=(By.CSS_SELECTOR, "a[class='btn btn-default check_out']")
 
     __private_loginButtonModel=(By.XPATH, "(//a[@href='/login'])[2]")
@@ -35,6 +38,9 @@ class testCaseFifteen(baseMethods):
 
     # Action Methods
 
+    def clicklogoutButton(self):
+        self.click(self.__private_logoutButton)
+        
     def clickProceedCheckout(self):
         self.click(self.__private_proceedCheckout)
 
