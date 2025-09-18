@@ -17,6 +17,6 @@ class initialTest():
 
         isImageSeen=driver.find_element(By.CSS_SELECTOR, "img[alt='Website for automation practice']").is_displayed()
 
-        log.info("isImageSeen %s",isImageSeen)
+        # log.info("isImageSeen %s",isImageSeen)
 
         assert isImageSeen, "Page is not loaded yet can't proceed further"
