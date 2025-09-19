@@ -31,11 +31,12 @@ class Test_caseTwo():
             tct.loginActions(email=email,password=password)
             try:
                 tct.loginConfiremationActions()
+                pass
             except Exception:
                 log.info("Incorrct Credentials")
                 return False
                 
-            # tct.postAccountActions()
+            tct.postAccountActions()
             endtime=time.time()
             log.info("Required Time %s", (endtime-startTime))
             return True
