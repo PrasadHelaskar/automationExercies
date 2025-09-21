@@ -8,7 +8,7 @@ from seleniumScripts.pageObjects.testCase19 import testCaseNinteen
 log=Logger().get_logger(__name__)
 
 class Test_caseNinteen():
-    @pytest.mark.order(6)
+    @pytest.mark.order(19)
     def test_caseNinteen(self,driver):
         initialTest().initialtest(driver)
         tcn=testCaseNinteen(driver)

@@ -20,7 +20,7 @@ class test1Helper(test1):
 #check the text cases 1,13 for successful exexution need alteratiom 
 
 class Test_caseFourteen():
-    @pytest.mark.order(6)
+    @pytest.mark.order(14)
     def test_caseFourteen(self,driver):
         tcf=testCaseFourteen(driver)
         startTime=time.time()

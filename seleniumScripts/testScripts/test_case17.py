@@ -11,7 +11,7 @@ class test13Helper(test13):
     __test__=False
 
 class Test_caseSeventeen():
-    @pytest.mark.order(6)
+    @pytest.mark.order(17)
     def test_caseSeventeen(self,driver):
         tcs=testCaseSeventeen(driver)
         startTime=time.time()

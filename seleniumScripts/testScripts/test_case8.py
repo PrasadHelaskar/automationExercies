@@ -7,7 +7,7 @@ from seleniumScripts.testScripts.test_base import initialTest
 log=Logger().get_logger(__name__)
 
 class Test_caseEight():
-    @pytest.mark.order(6)
+    @pytest.mark.order(8)
     def test_caseEight(self,driver):
         initialTest().initialtest(driver)
         tce=testCaseEight(driver)
