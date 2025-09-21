@@ -9,7 +9,7 @@ log=Logger().get_logger(__name__)
 
 class Test_caseOne():
     @pytest.mark.order(1)
-    def test_caseOne(self,driver):
+    def test_caseOne(self,driver)->str:
         initialTest().initialtest(driver)
         tco=testCaseOne(driver)
         faker=Faker('en_US')
@@ -35,11 +35,20 @@ class Test_caseOne():
         mobileNumber=faker.phone_number()
         
         tco.addressActions(firstname,lastname,address,state,city,zipCode,mobileNumber)
-
+        data={
+            "email": email,
+            "password": password,
+            "address":address,
+            "state":state,
+            "city":city,
+            "zipCode":zipCode
+        }
         tco.CreatAccountActions(name)
 
-        tco.postAccountActions()
+        # tco.postAccountActions()
 
         endTime=time.time()
 
         log.info("Required Time: %s", (endTime-startTime))
+
+        return data

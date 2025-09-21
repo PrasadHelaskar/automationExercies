@@ -17,7 +17,7 @@ class test2Helper(test2):
     __test__=False
 
 class Test_caseTwenty():
-    @pytest.mark.order(6)
+    @pytest.mark.order(20)
     def test_caseTwenty(self,driver):
         initialTest().initialtest(driver)
         tct=testCaseTwenty(driver)
@@ -26,7 +26,7 @@ class Test_caseTwenty():
         tct.verifyPageTitle()
 
         tct.searchActions() # verify pending
-        test12Helper().test_caseTwelve(driver) # ammaeded test case 12 
+        test12Helper().test_caseTwelve(driver) # ammended test case 12 
         data={"email": "amanda14@example.com", "password": "123654789"}
         test2Helper().test_caseTwo(driver,data)
 

@@ -20,7 +20,7 @@ class test1Helper(test1):
 #check the text cases 1,13 for successful exexution need alteratiom 
 
 class Test_caseFifteen():
-    @pytest.mark.order(6)
+    @pytest.mark.order(15)
     def test_caseFifteen(self,driver):
         tcf=testCaseFifteen(driver)
         startTime=time.time()
@@ -35,7 +35,7 @@ class Test_caseFifteen():
         
         tcf.clickSubmitCard()
         time.sleep(6)
-        tcf.postAccountActions()
+        # tcf.postAccountActions()
 
         endTime=time.time()
 
