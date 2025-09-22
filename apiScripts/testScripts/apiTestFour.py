@@ -4,13 +4,13 @@ from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
 
 log=Logger().get_logger()
-class Test_caseOne(BaseMethod):
-    @pytest.mark.order(1)
-    def test_caseOne(self,base_attribute):
+class Test_caseFour(BaseMethod):
+    @pytest.mark.order(4)
+    def test_caseFour(self,base_attribute):
             
-        url=base_attribute['url']+"/productsList"
+        url=base_attribute['url']+"/brandsList"
         
-        apiCall=self.get_method(url=url,time=5)
+        apiCall=self.put_method(url=url,time=5)
 
         log.info("Responce Code: %s",apiCall.status_code)
 

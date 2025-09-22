@@ -4,11 +4,11 @@ from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
 
 log=Logger().get_logger()
-class Test_caseOne(BaseMethod):
-    @pytest.mark.order(1)
-    def test_caseOne(self,base_attribute):
+class Test_caseThree(BaseMethod):
+    @pytest.mark.order(3)
+    def test_caseThree(self,base_attribute):
             
-        url=base_attribute['url']+"/productsList"
+        url=base_attribute['url']+"/brandsList"
         
         apiCall=self.get_method(url=url,time=5)
 
