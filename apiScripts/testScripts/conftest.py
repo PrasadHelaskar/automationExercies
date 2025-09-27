@@ -2,7 +2,7 @@ import pytest
 
 @pytest.fixture(scope='session')
 def base_attribute():
-    url="https://automationexercise.com/api/"
+    url="https://automationexercise.com/api"
 
     headers={}
 

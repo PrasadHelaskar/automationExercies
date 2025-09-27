@@ -9,8 +9,8 @@ class BaseMethod():
     
     def post_method(self,url,header=None,body=None,time:int=10):
 
-        # if body is None:
-        #     raise ValueError("POST request requires a body")
+        if body is None:
+            raise ValueError("POST request requires a body")
         
         apiCall=requests.post(url,headers=header,data=body,timeout=time)
 
