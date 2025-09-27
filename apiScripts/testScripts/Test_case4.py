@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseFour(BaseMethod):
     @pytest.mark.order(4)
     def test_caseFour(self,base_attribute):
-            
+        """
+            PUT To All Brands List
+        """
         url=base_attribute['url']+"/brandsList"
         
         apiCall=self.put_method(url=url,time=5)

@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseSix(BaseMethod):
     @pytest.mark.order(6)
     def test_caseSix(self,base_attribute):
-            
+        """
+            POST To Search Product without search_product parameter
+        """
         url=base_attribute['url']+"/searchProduct"
 
         body={

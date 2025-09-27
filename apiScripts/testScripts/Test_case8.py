@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseEight(BaseMethod):
     @pytest.mark.order(8)
     def test_caseEight(self,base_attribute):
-            
+        """
+            POST To Verify Login without email parameter
+        """
         url=base_attribute['url']+"/verifyLogin"
 
         body={

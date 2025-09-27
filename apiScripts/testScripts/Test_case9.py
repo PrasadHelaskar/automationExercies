@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseNine(BaseMethod):
     @pytest.mark.order(9)
     def test_caseNine(self,base_attribute):
-            
+        """
+            DELETE To Verify Login
+        """
         url=base_attribute['url']+"/verifyLogin"
 
         body={

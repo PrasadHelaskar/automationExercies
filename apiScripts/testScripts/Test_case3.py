@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseThree(BaseMethod):
     @pytest.mark.order(3)
     def test_caseThree(self,base_attribute):
-            
+        """
+            Get All Brands List
+        """
         url=base_attribute['url']+"/brandsList"
         
         apiCall=self.get_method(url=url,time=5)
