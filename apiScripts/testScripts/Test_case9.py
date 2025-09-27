@@ -2,6 +2,7 @@ import json
 import pytest
 from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
+from apiScripts.utils.jsonOperations import jsonRead
 
 log=Logger().get_logger()
 class Test_caseNine(BaseMethod):
@@ -13,8 +14,8 @@ class Test_caseNine(BaseMethod):
         url=base_attribute['url']+"/verifyLogin"
 
         body={
-            "email": "your.email+fakedata31671@gmail.com",
-            "password": "123123123"
+            "email": jsonRead("EMAIL"),
+            "password": jsonRead("PASSWORD")
         }
         
         apiCall=self.delete_method(url=url,body=body,time=5)

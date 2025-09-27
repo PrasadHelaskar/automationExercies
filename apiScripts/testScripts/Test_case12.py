@@ -15,7 +15,7 @@ class Test_caseTweleve(BaseMethod):
 
         body={
             "email": jsonRead("EMAIL"),
-            "password": "123123123"
+            "password": jsonRead("PASSWORD")
         }
         
         apiCall=self.delete_method(url=url,body=body,time=5)

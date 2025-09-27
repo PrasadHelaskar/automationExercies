@@ -19,7 +19,7 @@ class Test_caseThirteen(BaseMethod):
         body={
                 "name": fake.name(),
                 "email": jsonRead("EMAIL"),
-                "password": "123123123",
+                "password": jsonRead("PASSWORD"),
                 "title": "Mrs",
                 "birth_date": birthdate.day,
                 "birth_month": birthdate.month,

@@ -2,6 +2,7 @@ import json
 import pytest
 from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
+from apiScripts.utils.jsonOperations import jsonRead
 
 log=Logger().get_logger()
 class Test_caseTen(BaseMethod):
@@ -13,7 +14,7 @@ class Test_caseTen(BaseMethod):
         url=base_attribute['url']+"/verifyLogin"
 
         body={
-            "email": "your.email+fakedata31671@gmail.com",
+            "email": jsonRead("EMAIL"),
             "password": "123123"
         }
         
