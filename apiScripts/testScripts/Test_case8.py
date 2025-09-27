@@ -2,6 +2,7 @@ import json
 import pytest
 from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
+from apiScripts.utils.jsonOperations import jsonRead
 
 log=Logger().get_logger()
 class Test_caseEight(BaseMethod):
@@ -13,7 +14,7 @@ class Test_caseEight(BaseMethod):
         url=base_attribute['url']+"/verifyLogin"
 
         body={
-            "password": "123123123"
+            "password": jsonRead("PASSWORD")
         }
         
         apiCall=self.post_method(url=url,body=body,time=5)
