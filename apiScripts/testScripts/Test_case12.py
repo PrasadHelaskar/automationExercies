@@ -1,23 +1,24 @@
 import json
 import pytest
 from apiScripts.utils.logger import Logger
+from apiScripts.utils.jsonOperations import jsonRead
 from apiScripts.utils.baseMethods import BaseMethod
 
 log=Logger().get_logger()
-class Test_caseTen(BaseMethod):
-    @pytest.mark.order(10)
-    def test_caseTen(self,base_attribute):
+class Test_caseTweleve(BaseMethod):
+    @pytest.mark.order(12)
+    def test_caseTweleve(self,base_attribute):
         """
-            POST To Verify Login with invalid details
+            DELETE METHOD To Delete User Account
         """
-        url=base_attribute['url']+"/verifyLogin"
+        url=base_attribute['url']+"/deleteAccount"
 
         body={
-            "email": "your.email+fakedata31671@gmail.com",
-            "password": "123123"
+            "email": jsonRead("EMAIL"),
+            "password": "123123123"
         }
         
-        apiCall=self.post_method(url=url,body=body,time=5)
+        apiCall=self.delete_method(url=url,body=body,time=5)
 
         log.info("Responce Code: %s",apiCall.status_code)
 

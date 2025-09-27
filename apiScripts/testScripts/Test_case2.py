@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseTwo(BaseMethod):
     @pytest.mark.order(2)
     def test_caseTwo(self,base_attribute):
-            
+        """
+            POST To All Products List
+        """
         url=base_attribute['url']+"/productsList"
         
         apiCall=self.post_method(url=url,time=5)

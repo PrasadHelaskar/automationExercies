@@ -1,23 +1,26 @@
 import json
 import pytest
+from faker import Faker
 from apiScripts.utils.logger import Logger
 from apiScripts.utils.baseMethods import BaseMethod
+from apiScripts.utils.jsonOperations import jsonRead
 
 log=Logger().get_logger()
-class Test_caseTen(BaseMethod):
-    @pytest.mark.order(10)
-    def test_caseTen(self,base_attribute):
+fake=Faker()
+birthdate = fake.date_of_birth(minimum_age=18, maximum_age=60)
+class Test_caseFouteen(BaseMethod):
+    @pytest.mark.order(14)
+    def test_caseFouteen(self,base_attribute):
         """
-            POST To Verify Login with invalid details
+            GET user account detail by email
         """
-        url=base_attribute['url']+"/verifyLogin"
+        url=base_attribute['url']+"/getUserDetailByEmail"
 
         body={
-            "email": "your.email+fakedata31671@gmail.com",
-            "password": "123123"
+                "email": jsonRead("EMAIL")
         }
         
-        apiCall=self.post_method(url=url,body=body,time=5)
+        apiCall=self.get_method(url=url,params=body,time=5)
 
         log.info("Responce Code: %s",apiCall.status_code)
 

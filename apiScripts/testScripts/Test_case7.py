@@ -7,7 +7,9 @@ log=Logger().get_logger()
 class Test_caseSeven(BaseMethod):
     @pytest.mark.order(7)
     def test_caseSeven(self,base_attribute):
-            
+        """
+            POST To Verify Login with valid details
+        """
         url=base_attribute['url']+"/verifyLogin"
 
         body={
