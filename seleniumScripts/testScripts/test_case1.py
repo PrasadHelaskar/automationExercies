@@ -45,7 +45,7 @@ class Test_caseOne():
         }
         tco.CreatAccountActions(name)
 
-        # tco.postAccountActions()
+        tco.postAccountActions()
 
         endTime=time.time()
 

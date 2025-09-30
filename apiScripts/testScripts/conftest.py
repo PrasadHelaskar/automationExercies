@@ -1,9 +1,10 @@
+import os
 import pytest
 
 @pytest.fixture(scope='session')
 def base_attribute():
-    url="https://automationexercise.com/api"
-
+    url=os.getenv("APIURL")
+    
     headers={}
 
     Base_object={
