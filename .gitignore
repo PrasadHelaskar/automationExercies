@@ -1,6 +1,8 @@
 .env
+.config
 __pycache__
 __init__.py
 log
 testData
 timepass
+pytest.ini
