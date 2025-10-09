@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source env_selector.sh
+source shellFiles/env_selector.sh
 
 select_env "$1"
 
