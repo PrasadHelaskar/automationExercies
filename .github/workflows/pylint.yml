@@ -1,12 +1,41 @@
 name: Pylint
 
-on: [push]
+on: 
+    push:
+        branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
-    - name: starting the action
+    - name: Starting the Github-Action
       run: 
-          echo "FLow started"
+          echo "Flow started"
+    
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+          python-version: "3.10"  # change if needed
+
+    - name: Install pylint
+      run: |
+          python -m pip install --upgrade pip
+          pip install pylint
+
+    - name: Create logs directory
+      run: mkdir -p actionlogs
+
+    - name: Run pylint
+      run: |
+          echo "Running pylint..."
+          pylint . > actionlogs/linter-report.txt || true
+
+    - name: Upload linter report
+      uses: actions/upload-artifact@v4
+      with:
+          name: pylint-report
+          path: actionlogs/linter-report.txt  
