@@ -7,11 +7,11 @@ Supports both UI (Selenium) and API (Requests) test cases. Incorporates Page Obj
 
 ## Table of Contents
 
-- Features
-- Prerequisites
-- Installation
-- Project Structure
-- Configuration
+- [Features](https://github.com/PrasadHelaskar/automationExercies?tab=readme-ov-file#features)
+- [Prerequisites](https://github.com/PrasadHelaskar/automationExercies?tab=readme-ov-file#prerequisites)
+- [Installation](https://github.com/PrasadHelaskar/automationExercies?tab=readme-ov-file#installation)
+- [Structure](https://github.com/PrasadHelaskar/automationExercies?tab=readme-ov-file#project-structure)
+- [Configuration](https://github.com/PrasadHelaskar/automationExercies?tab=readme-ov-file#configuration)
 
 ---
 
