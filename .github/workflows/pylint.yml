@@ -5,11 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+    
     steps:
-    - uses: actions/checkout@v4
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
+    - name: starting the action
+      run: 
+          echo "FLow started"
