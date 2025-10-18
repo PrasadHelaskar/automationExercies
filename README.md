@@ -76,5 +76,5 @@ Store project-specific settings in a configuration file (e.g., `config.json`) or
 - `BASE_URL` – The base URL of the application under test.  
 - `API_TOKEN` / credentials – Authentication details for API or services.  
 - `DEFAULT_TIMEOUT` – Default timeout for requests or UI waits.  
-- Browser settings – Options like headless mode, window size, etc.
+- `Browser settings` – Options like headless mode, window size, etc.
 
